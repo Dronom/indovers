@@ -1,0 +1,145 @@
+.title__about-us::after {
+  background-color: #586399;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 8px 16px #f3f0e3;
+  border-radius: 24px;
+  width: 220px;
+  height: 200px;
+  z-index: 5;
+
+  &__icon-wrapper {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &-description {
+    text-align: center;
+  }
+
+  &-number {
+    font-weight: bold;
+    font-size: 39px;
+    opacity: 0.8;
+    margin-right: 11px;
+  }
+
+  &-description-name {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: left;
+
+    @media screen and (max-width: $device-width-small) {
+      font-size: 16px;
+    }
+  }
+
+  &__team-members {
+    .card__icon-wrapper {
+      background: #fdf3db;
+    }
+  }
+
+  &__games-released {
+    .card__icon-wrapper {
+      background: #d5f5ff;
+    }
+  }
+
+  &__game-downloads {
+    .card__icon-wrapper {
+      background: #f4daff;
+    }
+  }
+
+  &__reviews-posted {
+    .card__icon-wrapper {
+      background: #ebfddb;
+    }
+  }
+
+  @media screen and (max-width: $device-width-large) {
+    width: 260px;
+    margin-bottom: 30px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 200px;
+    background: repeating-linear-gradient(
+      to left top,
+      transparent,
+      transparent 10px,
+      #fed644 5px,
+      #fed644 22px
+    );
+    opacity: 0.2;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    border-radius: 5px;
+    z-index: 4;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 200px;
+    background: repeating-linear-gradient(
+      to left top,
+      transparent,
+      transparent 10px,
+      #fed644 5px,
+      #fed644 22px
+    );
+    opacity: 0.2;
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    border-radius: 5px;
+    z-index: 4;
+  }
+
+  @media screen and (max-width: $device-width-large) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &::before {
+      left: -20px;
+    }
+
+    &::after {
+      right: -20px;
+      bottom: 0;
+    }
+  }
+}

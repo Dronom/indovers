@@ -1,0 +1,126 @@
+.section__our-team {
+  overflow: hidden;
+}
+
+.container {
+  &__team-cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 245px;
+    position: relative;
+
+    @media screen and (max-width: $device-width-large) {
+      flex-flow: column;
+      margin: 0 auto;
+    }
+  }
+}
+
+.team-card {
+  max-width: 300px;
+  max-height: 260px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__card-wrapper {
+    padding: 47px 70px 56px 70px;
+    position: relative;
+    display: flex;
+    border-radius: 24px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__first-card {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 144px;
+      height: 144px;
+      background-image: url(/assets/images/cross.svg);
+      position: absolute;
+      left: -75px;
+      top: -70px;
+      background-size: 30px;
+      background-repeat: space;
+    }
+    .team-card__card-wrapper {
+      background: #fff2ea;
+    }
+  }
+
+  &__second-card {
+    .team-card__card-wrapper {
+      background: #eafbff;
+    }
+  }
+
+  &__third-card {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 144px;
+      height: 144px;
+      background-image: url(/assets/images/cross.svg);
+      position: absolute;
+      right: -70px;
+      bottom: -85px;
+      background-size: 30px;
+      background-repeat: space;
+    }
+    .team-card__card-wrapper {
+      background: #f3eaff;
+    }
+  }
+
+  @media screen and (max-width: $device-width-large) {
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (max-width: $device-width-small) {
+    margin-bottom: 80px;
+  }
+}
+
+.team-member {
+  &-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &-name {
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &-status {
+    color: #000;
+    font-size: 13px;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  @media screen and (max-width: $device-width-small) {
+    &-name {
+      font-size: 20px;
+    }
+    &-status {
+      font-size: 16px;
+    }
+  }
+}

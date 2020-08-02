@@ -1,0 +1,195 @@
+.game {
+  &-container {
+    display: flex;
+    margin-bottom: 150px;
+  }
+
+  &-photo {
+    border-radius: 20px;
+
+    &-container {
+      width: 300px;
+      margin-right: 80px;
+    }
+  }
+
+  &-description {
+    &-container {
+      width: 100%;
+
+      @media screen and (max-width: $device-width-small) {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      opacity: 0.8;
+      margin-top: 20px;
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &-name {
+    font-weight: bold;
+    font-size: 28px;
+    opacity: 0.8;
+  }
+
+  &-date-of-release {
+    font-size: 14px;
+    opacity: 0.2;
+  }
+
+  &-genre {
+    border-radius: 12px;
+    opacity: 0.8;
+    text-align: center;
+    padding: 5px 20px;
+    margin-top: 18px;
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  @media screen and (max-width: $device-width-large) {
+    &-header {
+      flex-flow: column;
+    }
+  }
+
+  @media screen and (max-width: $device-width-medium) {
+    &-container {
+      flex-direction: column;
+    }
+
+    &-photo-container {
+      margin: 0 auto;
+      width: 350px;
+      margin-bottom: 50px;
+    }
+
+    &-description-container {
+      width: 350px;
+      margin: 0 auto;
+    }
+
+    &-description-text {
+      text-align: justify;
+    }
+
+    &-header {
+      flex-flow: column-reverse;
+    }
+  }
+
+  @media screen and (max-width: $device-width-small) {
+    &-photo-container {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    &-description-container {
+      width: auto;
+    }
+  }
+}
+
+.genre {
+  &-strategy {
+    color: #30ceff;
+    background: #d5f5ff;
+  }
+
+  &-simulation,
+  &-pixel-graphics {
+    color: #ca4cff;
+    background: #f4daff;
+  }
+
+  &-indie,
+  &-2d {
+    color: #f6b825;
+    background: #fdf3db;
+  }
+
+  &-city-builder {
+    color: #88f02c;
+    background: #ebfddb;
+  }
+}
+
+.available-on-steam {
+  display: block;
+  padding: 3px 15px;
+  margin-top: 40px;
+  border-radius: 14px;
+  background: #000;
+  box-shadow: 0px 11px 10px rgba(0, 0, 0, 0.5);
+  width: 160px;
+}
+
+.main-photo {
+  width: 300px;
+  height: 170px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: $device-width-medium) {
+    width: 350px;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: $device-width-small) {
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+  }
+}
+
+.secondary-photo {
+  width: 140px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.3);
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: $device-width-medium) {
+    width: 160px;
+  }
+
+  @media screen and (max-width: $device-width-small) {
+    width: 49%;
+  }
+}
+
+.button {
+  &-container {
+    text-align: center;
+    width: 100%;
+  }
+
+  &__show-more-games {
+    font-weight: 600;
+    color: #293366;
+    opacity: 0.8;
+    padding: 12px 50px;
+    border: 1px solid #293366;
+    box-shadow: 0px 11px 10px rgba(41, 51, 102, 0.5);
+    border-radius: 14px;
+    margin-top: 100px;
+    margin-bottom: 120px;
+  }
+}
